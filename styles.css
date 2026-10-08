@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    color: #2D3748;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #3C8527;
+    color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #FFFFFF;
+}
+
+header h1 {
+    font-size: 39px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    margin: 10px 0 5px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    grid-area: main;
+    padding: 40px;
+}
+
+article {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E2E8F0;
+    overflow: auto;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+article h2 {
+    font-size: 34px;
+    color: #28651C;
+    margin-bottom: 5px;
+}
+
+.post-info {
+    color: #667267;
+    margin-top: 0;
+}
+
+.post-image-right {
+    float: right;
+    width: 300px;
+    height: 200px;
+    margin: 0 0 20px 20px;
+}
+
+.post-image-left {
+    float: left;
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    margin: 0 20px 20px 0;
+}
+
+aside {
+    grid-area: sidebar;
+    padding: 40px 30px;
+}
+
+aside section {
+    margin-bottom: 40px;
+}
+
+aside h3 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #28651C;
+}
+
+.about {
+    background-color: #E2E8F0;
+    padding: 20px;
+}
+
+.about h3 {
+    color: #333322;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 8px;
+}
+
+aside a {
+    color: #2879B8;
+    text-decoration: none;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #28651C;
+    color: #FFFFFF;
+    padding: 20px 40px;
+}
